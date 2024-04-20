@@ -278,3 +278,13 @@ body {
   display: block;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+    /* Styles for screens with a maximum width of 768px */
+    .container {
+      padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+    
+    .logo {
+      max-width: 100px; /* Adjust logo size for smaller screens */
+    }
