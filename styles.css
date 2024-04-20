@@ -1,0 +1,280 @@
+/* Reset CSS */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.main {
+  padding: 50px 0;
+}
+
+.intro {
+  text-align: center;
+}
+
+.tagline {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.construction {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  font-size: 1em;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.ceo-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .ceo-info {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px 30px; /* Add some padding (adjust as needed) */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    max-width: 550px; /* Limit width for better readability */
+    border: 2px solid #ccc; /* Add border with a color (adjust as needed) */
+  }
+  
+  
+  .ceo-info p {
+   
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to two lines */
+    -webkit-box-orient: vertical;
+  }
+  
+  
+  
+  .ceo-img {
+    width: 200px; /* Adjust image width as needed */
+    height: 200px; /* Adjust image height as needed */
+    border-radius: 50%; /* Rounded corners for circular image */
+    margin-bottom: 0px; /* Adjust margin bottom as needed */
+  }
+  
+  
+
+.ceo-name {
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+.ceo-position {
+  font-size: 1.2em;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.ceo-bio {
+  font-size: 1.1em;
+}
+
+.team-heading {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px; /* Add some padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    max-width: 200px; /* Limit width for better readability */
+    margin: 20px; /* Adjust spacing between team members */
+    text-align: center; /* Center align text */
+  }
+  
+  
+  .team-member-img {
+    border-radius: 50%;
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .team-member-name {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+  
+  .team-member-position {
+    font-size: 1.1em;
+  }
+  
+
+.videos-heading {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+  .printing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .printing-item {
+    text-align: center;
+  }
+  
+  .printing-item img {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  
+  .image-title {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  
+  .map-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Aspect ratio: 16:9 */
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+
+
+
+
+
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-links {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.logo-link {
+  text-align: center;
+  display: inline-block;
+}
+
+.logo-link .logo {
+  max-width: 100px;
+}
+
+.click-through-text {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.copyright {
+  font-size: 0.9em;
+  display: block;
+  margin-top: 10px;
+}
