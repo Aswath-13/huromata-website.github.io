@@ -1,190 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Huromata.com </title>
-  <link rel="icon" href="logo.png">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huromata - Temporary Down</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .rolling-bar {
+            margin-top: 20px;
+            width: 100%;
+            height: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .rolling-bar::before {
+            content: '';
+            position: absolute;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            animation: roll 2s infinite linear;
+        }
+
+        @keyframes roll {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        #robotArm {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+        }
+
+        .base {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #444;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+
+        .arm {
+            position: absolute;
+            width: 20px;
+            height: 80px;
+            background: #666;
+            bottom: 40px;
+            left: 50%;
+            transform-origin: bottom;
+            transform: translateX(-50%);
+            animation: moveArm 2s infinite alternate;
+        }
+
+        .forearm {
+            position: absolute;
+            width: 20px;
+            height: 60px;
+            background: #888;
+            top: 0;
+            left: 50%;
+            transform-origin: top;
+            animation: moveForearm 2s infinite alternate;
+        }
+
+        .hand {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #aaa;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+
+        @keyframes moveArm {
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+            100% {
+                transform: translateX(-50%) rotate(45deg);
+            }
+        }
+
+        @keyframes moveForearm {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+
+        #lcdDisplay {
+            width: 300px;
+            height: 50px;
+            margin-top: 30px;
+            background: #000;
+            color: #0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5em;
+            border-radius: 10px;
+            border: 2px solid #333;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #lcdDisplay .text {
+            position: absolute;
+            white-space: nowrap;
+            animation: scrollText 10s linear infinite;
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
     <div class="container">
-      <img src="hutomata_logo.png" alt="Hutomata Logo" class="logo">
-      <h1 class="title">Huromata</h1>
+        <h1>Huromata.com</h1>
+        <h4>We apologize for any inconvenience caused.</h4>
+        <p>Our website is currently undergoing scheduled maintenance. Please check back with us shortly. Thank you for your understanding and patience.</p>
+        <div class="rolling-bar"></div>
     </div>
-  </header>
 
-  <main class="main">
-    <section class="intro">
-      <div class="container">
-        <p class="tagline">Unlocking the future of <span class="highlight">Robotics</span>, <span class="highlight">Drones</span>, and <span class="highlight">Automation</span>.</p>
-        <p class="construction">Stay tuned for updates on our latest innovations. Website <span class="highlight">Under Construction</span></p>
-      </div>
-    </section>
-     
-      
-    <center><section class="ceo-section">
-        <div class="container">
-            <div class="ceo-info">
-                <img src="aswath_ceo.jpg" alt="CEO Aswath" class="ceo-img">
-                <h3 class="ceo-name">Aswath</h3>
-                <p class="ceo-position">CEO/Founder</p>
-                <p class="ceo-bio">Aswath is the visionary leader behind Huromata, driving innovation in Robotics, Drones, and Automation.</p>
-              </div>
+    <div id="robotArm">
+        <div class="base"></div>
+        <div class="arm">
+            <div class="forearm">
+                <div class="hand"></div>
+            </div>
         </div>
-      </section></center>
-       
-    <br>
-    <br>
-    <br>
-      
-      <section class="contact-follow">
-        <center>
-          <div class="container">
-            <div class="spacer"></div> <!-- Added spacer -->
-            <a href="mailto:teamhuromata@gmail.com" class="btn">Contact Us</a>
-            <a href="https://www.linkedin.com/in/aswath-tamilan-4622b5247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn">Follow CEO on LinkedIn</a>
-          </div>
-        </center>
-      </section>
-<br>
-<br>
-<br>
-      <section class="team">
-        <div class="container">
-          <h2 class="team-heading">Team Members</h2>
-          <div class="team-members">
-            <div class="team-member">
-              <img src="adavan.jpg" alt="Adavan" class="team-member-img">
-              <div>
-                <h3 class="team-member-name">Adavan</h3>
-                <p class="team-member-position">Robotic Engineer</p>
-                <p class="team-member-description">Dedicated third-year college student specializing in Robotics, passionate about driving innovation in technology.</p>
-              </div>
-            </div>
-            <div class="team-member">
-              <img src="aldrick_peter.jpg" alt="Aldrick Peter" class="team-member-img">
-              <div>
-                <h3 class="team-member-name">Aldrick Peter</h3>
-                <p class="team-member-position">EEE Engineer</p>
-                <p class="team-member-description">Diligent third-year college student pursuing Electrical and Electronics Engineering (EEE), focused on engineering excellence and sustainable energy solutions.</p>
-              </div>
-            </div>
-            <div class="team-member">
-              <img src="adarsh.jpg" alt="Adarsh" class="team-member-img">
-              <div>
-                <h3 class="team-member-name">Adarsh</h3>
-                <p class="team-member-position">Mechatronic Engineer</p>
-                <p class="team-member-description">Motivated third-year college student specializing in Mechatronics Engineering, aiming to develop integrated systems for optimal performance.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
-           
-  </main>
-
-
-  <section class="videos">
-    <div class="container">
-      <h2 class="videos-heading">Latest YouTube Videos</h2>
-      <div class="video-container">
-        <center>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </center>
-      </div>
-     <br>
     </div>
-  </section>      
 
-
-
-<br>
-<br>
-
-
-<section class="printing-section"><center>
-    <div class="container">
-      <h2 class="printing-heading">What We Do</h2>
-      <p>We specialize in 3D printing using PLA, ABS, and PETG filaments. Here are some of our recent works:</p>
-      
-      <div class="printing-grid">
-        <div class="printing-item">
-          <img src="image1.jpg" alt="Image 1">
-          <h3 class="image-title">Mini Robotic Arm with Wifi Control</h3>
-        </div>
-        <div class="printing-item">
-          <img src="image2.jpg" alt="Image 2">
-          <h3 class="image-title"> Robotic Dog Parts</h3>
-        </div>
-        <div class="printing-item">
-          <img src="image3.jpg" alt="Image 3">
-          <h3 class="image-title"> Planetary gear</h3>
-        </div>
-        <div class="printing-item">
-          <img src="image4.jpg" alt="Image 4">
-          <h3 class="image-title">Mono color Keychains</h3>
-        </div>
-        <div class="printing-item">
-          <img src="image5.jpg" alt="Image 5">
-          <h3 class="image-title">Dual color Keychains</h3>
-        </div>
-        <div class="printing-item">
-          <img src="image6.jpg" alt="Image 6">
-          <h3 class="image-title">Geneva Mechanism</h3>
-        </div>
-      </div>
-    </div></center>
-  </section>
-  
-  <br>
-<br>
-<br>
-<br>
-
-
-
-
-<div style="text-align: center;">
-    <!-- Add your additional content here -->
-    <h2>Our Location</h2>
-    <p>We are located at:</p>
-    <address>
-      10, Kaleeswara Nagar, <br>
-      Ram Nagar, Coimbatore, <br>
-      Tamil Nadu 641009
-    </address>
-    <p><strong>Note:</strong> Currently, visitors are not allowed without prior permission. For inquiries, please contact us via email at <a href="mailto:teamhuromata@gmail.com">teamhuromata@gmail.com</a> or call us at <a href="tel:+919626223100">96262 23100</a>.</p>
-  
-    <!-- Embed the Google Maps location -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4142946537722!2d76.96040897586288!3d11.007510454887084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8596f9482a7df%3A0x9444d62325bba91d!2sAswath%20workshop!5e0!3m2!1sen!2sin!4v1713601049697!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-  
-
-
-
-
-
-
-
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="social-links">
-        <a href="https://youtube.com/@Huromata?si=dEe31Cp9HvJi-UkH" target="_blank"><img src="youtube_icon.png" alt="YouTube" class="social-icon"></a>
-        <a href="https://www.linkedin.com/in/aswath-tamilan-4622b5247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="linkedin_icon.png" alt="LinkedIn" class="social-icon"></a>
-        <a href="https://www.instagram.com/huromata" target="_blank"><img src="instagram_icon.png" alt="Instagram" class="social-icon"></a>
-      </div>
-      <div class="copyright">
-        &copy; 2024 Huromata. All rights reserved. | <a href="https://www.huromata.com">huromata.com</a>
-      </div>
+    <div id="lcdDisplay">
+        <div class="text">Thanks for your patience</div>
     </div>
-  </footer>
-  
-  
 </body>
 </html>
